@@ -53,7 +53,16 @@ sysinfo.txt
 
 # Builds
 *.unitypackage
+*.apk
 
 # Crashlytics generated file
 crashlytics-build.properties
 
+*.apk
+<<<<<<< HEAD
+TEST_FPS.apk
+TEST_FPS_BurstDebugInformation_DoNotShip/tempburstlibs/armeabi-v7a/lib_burst_generated.txt
+TEST_FPS_BurstDebugInformation_DoNotShip/tempburstlibs/armeabi-v7a/lib_burst_generated.txt
+TEST_FPS.apk
+=======
+>>>>>>> 53018a426 (Update .gitignore)
