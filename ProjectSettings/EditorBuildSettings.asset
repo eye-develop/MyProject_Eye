@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/POLYGON/PolygonBattleRoyale/Scenes/Demo_1.unity
+    path: Assets/Assetss/POLYGON/PolygonBattleRoyale/Scenes/Demo_1.unity
     guid: 0572cfd979f87c349a058c371b6fa2e2
   - enabled: 1
-    path: Assets/POLYGON/PolygonMilitary/Scenes/Lv_01.unity
+    path: Assets/Assetss/POLYGON/PolygonMilitary/Scenes/Lv_01.unity
     guid: 89dc5e15ea6e17f53905f2b3b83fecce
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4d9a5df978638bd4da0afbeb62de7feb,
