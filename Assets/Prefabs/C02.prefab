@@ -670,7 +670,7 @@ MonoBehaviour:
   BlockOdds: 80
   GeneratedBlockOdds: 0
   m_AnimationsChanged: 0
-  m_LastAnimatorType: 0
+  m_LastAnimatorType: 1
   BackupOdds: 50
   GeneratedBackupOdds: 0
   BackupDistance: 12
@@ -769,7 +769,19 @@ MonoBehaviour:
   WeaponTrail: {fileID: 0}
   DeathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 542337538390353506}
+        m_TargetAssemblyTypeName: BNG.Damageable, Assembly-CSharp
+        m_MethodName: DestroyThis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   DamageEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1005,13 +1017,13 @@ MonoBehaviour:
   ObstructionDetectionUpdateSeconds: 0.1
   ObstructionDetectionUpdateTimer: 0
   CurrentHealth: 0
-  StartingHealth: 15
+  StartingHealth: 100
   DetectionRadius: 18
   CurrentDamageAmount: 5
   DamageAmountRun: 5
   WanderRadius: 25
   TabNumber: 1
-  TemperamentTabNumber: 2
+  TemperamentTabNumber: 5
   DetectionTagsTabNumber: 1
   AnimationTabNumber: 2
   SoundTabNumber: 0
@@ -1024,7 +1036,7 @@ MonoBehaviour:
   IdleAnimationNumber: 1
   CombatTabNumber: 0
   FactionsAndTagTabNumber: 1
-  EventTabNumber: 0
+  EventTabNumber: 1
   MinimumWaitTime: 3
   MaximumWaitTime: 6
   MinimumFollowWaitTime: 1
@@ -1606,7 +1618,7 @@ MonoBehaviour:
   DeactivateCollidersOnDeath: []
   DestroyOnDeath: 1
   DropOnDeath: 1
-  DestroyDelay: 0
+  DestroyDelay: 5
   Respawn: 0
   RespawnTime: 10
   RemoveBulletHolesOnDeath: 1
