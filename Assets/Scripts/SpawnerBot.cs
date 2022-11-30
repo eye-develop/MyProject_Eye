@@ -12,6 +12,7 @@ public class SpawnerBot : MonoBehaviour
     [SerializeField] private int chanseHardBot = 30;
     [SerializeField] private int lvl = 1;
     [SerializeField] private int countBot1Lvl = 10;
+    [SerializeField] private int plusBotLvl = 2;
     [SerializeField] private GameObject prefabBotBoss;
     [SerializeField] private int everyLevels = 5;
     
@@ -53,7 +54,7 @@ public class SpawnerBot : MonoBehaviour
     private void Level()
     {
         lvl += 1;
-        countBot1Lvl += 2;
+        countBot1Lvl += plusBotLvl;
         chanseHardBot += 5;
         StartCoroutine(Spawn());
     }
