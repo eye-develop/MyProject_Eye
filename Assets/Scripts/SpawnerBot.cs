@@ -41,12 +41,6 @@ public class SpawnerBot : MonoBehaviour
                     break;
             }
 
-            if (lvl % everyLevels == 0)
-            {
-                Debug.Log("boss");
-                //Instantiate(prefabBotBoss,spawners[randomSpawn].transform.position,Quaternion.identity,parent.transform);
-            }
-                 
             yield return new WaitForSeconds(2f);
         }
     }
@@ -56,7 +50,22 @@ public class SpawnerBot : MonoBehaviour
         lvl += 1;
         countBot1Lvl += plusBotLvl;
         chanseHardBot += 5;
+        
         StartCoroutine(Spawn());
+        
+        if (lvl % everyLevels == 0)
+            SpawnBoss();
+    }
+    
+    
+    private void SpawnBoss()
+    {
+        if (prefabBotBoss != null)
+        {
+            int randomSpawn = Random.Range(0, spawners.Count-1);
+            Instantiate(prefabBotBoss,spawners[randomSpawn].transform.position,Quaternion.identity,parent.transform);
+        }
+        
     }
     
     public IEnumerator AllBot()

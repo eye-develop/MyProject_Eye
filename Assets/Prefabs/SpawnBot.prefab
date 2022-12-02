@@ -497,10 +497,16 @@ MonoBehaviour:
   - {fileID: 7275872282793139667}
   - {fileID: 7275872283768534600}
   parent: {fileID: 7275872282357415418}
-  prefabBot: {fileID: 542337538390353517, guid: 3c694622f1545ae4da02645bb4a6c39e,
+  prefabsBot:
+  - {fileID: 542337538390353517, guid: 3c694622f1545ae4da02645bb4a6c39e, type: 3}
+  - {fileID: 3369045842632276876, guid: 955a44bae93ef574995a81a5fd781ff3, type: 3}
+  chanseHardBot: 30
+  lvl: 4
+  countBot1Lvl: 2
+  plusBotLvl: 2
+  prefabBotBoss: {fileID: 7053327211103695858, guid: 108aea4def7b12645b504cdcdc02aff4,
     type: 3}
-  lvl: 1
-  countBot1lvl: 10
+  everyLevels: 5
 --- !u!1 &7275872282990686539
 GameObject:
   m_ObjectHideFlags: 0
