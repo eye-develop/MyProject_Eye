@@ -1,21 +1,56 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using EmeraldAI;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class SpawnerBot : MonoBehaviour
 {
-    
+    [Tooltip("Точки появления бота")]
     [SerializeField] private List<GameObject> spawners;
     [SerializeField] private GameObject parent;
+    [Header("Настройки ботов")]
+    [Tooltip("Префабы ботов")]
     [SerializeField] private List<GameObject> prefabsBot;
+    [Tooltip("Радиус обнаружения игрока ботом")]
+    [SerializeField] private int[] detectionRadius;
+    [Tooltip("Скорость бега")]
+    [SerializeField] private int[] runSpeed;
+    [Header("Настройки уровня")]
+    [Tooltip("Шанс появления сильного бота(Element 1 в префабах бота)")]
     [SerializeField] private int chanseHardBot = 30;
+    [Tooltip("Отображение уровня")]
     [SerializeField] private int lvl = 1;
+    [Tooltip("Колличество ботов на первом уровне")]
     [SerializeField] private int countBot1Lvl = 10;
+    [Tooltip("Сколько ботов добавится при переходе на следующий уровень")]
     [SerializeField] private int plusBotLvl = 2;
+    [Tooltip("Сколько добавить скорости боту на следующем уровне")]
+    [SerializeField] private int plusSpeed = 1;
+    [Header("Настройки босса")]
+    [Tooltip("Префаб босса")]
     [SerializeField] private GameObject prefabBotBoss;
+    [Tooltip("Через сколько уровней появится босс")]
     [SerializeField] private int everyLevels = 5;
-    
+    [Tooltip("Радиус обнаружения")]
+    [SerializeField] private int detectionRadiusBoss = 18;
+    [Tooltip("Скорость бега")]
+    [SerializeField] private int runSpeedBoss = 5;
+
+    private void Awake()
+    {
+        prefabBotBoss.GetComponent<EmeraldAI.EmeraldAISystem>().DetectionRadius = detectionRadiusBoss;
+        prefabBotBoss.GetComponent<EmeraldAISystem>().RunSpeed = runSpeedBoss;
+        
+        for (int i = 0; i < prefabsBot.Count - 1; i++)
+        {
+            prefabsBot[i].GetComponent<EmeraldAI.EmeraldAISystem>().DetectionRadius = detectionRadius[i];
+            prefabsBot[i].GetComponent<EmeraldAISystem>().RunSpeed = runSpeed[i];
+        }
+    }
+
     private void Start()
     {
         StartCoroutine(Spawn());
@@ -50,6 +85,11 @@ public class SpawnerBot : MonoBehaviour
         lvl += 1;
         countBot1Lvl += plusBotLvl;
         chanseHardBot += 5;
+        
+        for (int i = 0; i < prefabsBot.Count - 1; i++)
+        {
+            prefabsBot[i].GetComponent<EmeraldAISystem>().RunSpeed += plusSpeed;
+        }
         
         StartCoroutine(Spawn());
         
