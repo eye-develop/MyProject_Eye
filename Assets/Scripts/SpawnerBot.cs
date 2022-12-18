@@ -41,14 +41,15 @@ public class SpawnerBot : MonoBehaviour
 
     private void Awake()
     {
-        prefabBotBoss.GetComponent<EmeraldAI.EmeraldAISystem>().DetectionRadius = detectionRadiusBoss;
+        prefabBotBoss.GetComponent<EmeraldAISystem>().DetectionRadius = detectionRadiusBoss;
         prefabBotBoss.GetComponent<EmeraldAISystem>().RunSpeed = runSpeedBoss;
         
         for (int i = 0; i < prefabsBot.Count - 1; i++)
         {
-            prefabsBot[i].GetComponent<EmeraldAI.EmeraldAISystem>().DetectionRadius = detectionRadius[i];
+            prefabsBot[i].GetComponent<EmeraldAISystem>().DetectionRadius = detectionRadius[i];
             prefabsBot[i].GetComponent<EmeraldAISystem>().RunSpeed = runSpeed[i];
         }
+        
     }
 
     private void Start()
@@ -61,7 +62,7 @@ public class SpawnerBot : MonoBehaviour
     {
         for (int i = 0; i < countBot1Lvl; i++)
         {
-            int randomSpawn = Random.Range(0, spawners.Count-1);
+            int randomSpawn = Random.Range(0, spawners.Count);
             int randomBot = Random.Range(0, 101);
 
             switch (randomBot)

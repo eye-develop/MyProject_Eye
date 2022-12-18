@@ -1373,7 +1373,7 @@ Transform:
   m_GameObject: {fileID: 1139712404976762539}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12, y: 0, z: 94}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 6511808042277128725}
   - {fileID: 739442892196262414}
@@ -1880,11 +1880,11 @@ MonoBehaviour:
   ObstructionDetectionUpdateTimer: 0
   CurrentHealth: 0
   StartingHealth: 500
-  DetectionRadius: 18
+  DetectionRadius: 150
   CurrentDamageAmount: 5
   DamageAmountRun: 5
   WanderRadius: 25
-  TabNumber: 1
+  TabNumber: 2
   TemperamentTabNumber: 1
   DetectionTagsTabNumber: 0
   AnimationTabNumber: 2
@@ -1918,7 +1918,7 @@ MonoBehaviour:
   ExpandedFieldOfViewAngle: 300
   fieldOfViewAngle: 180
   fieldOfViewAngleRef: 0
-  MaxChaseDistance: 30
+  MaxChaseDistance: 160
   AngleNeededToTurn: 10
   AngleNeededToTurnRunning: 30
   TooCloseDistance: 1
