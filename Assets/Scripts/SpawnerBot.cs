@@ -8,14 +8,15 @@ using Random = UnityEngine.Random;
 
 public class SpawnerBot : MonoBehaviour
 {
+    [SerializeField] private GameObject text;
     [Tooltip("Точки появления бота")]
     [SerializeField] private List<GameObject> spawners;
     [SerializeField] private GameObject parent;
     [Header("Настройки ботов")]
     [Tooltip("Префабы ботов")]
     [SerializeField] private List<GameObject> prefabsBot;
-    [Tooltip("Радиус обнаружения игрока ботом")]
-    [SerializeField] private int[] detectionRadius;
+    //[Tooltip("Радиус обнаружения игрока ботом")]
+    //[SerializeField] private int[] detectionRadius;
     [Tooltip("Скорость бега")]
     [SerializeField] private int[] runSpeed;
     [Header("Настройки уровня")]
@@ -46,7 +47,7 @@ public class SpawnerBot : MonoBehaviour
         
         for (int i = 0; i < prefabsBot.Count - 1; i++)
         {
-            prefabsBot[i].GetComponent<EmeraldAISystem>().DetectionRadius = detectionRadius[i];
+            //prefabsBot[i].GetComponent<EmeraldAISystem>().DetectionRadius = detectionRadius[i];
             prefabsBot[i].GetComponent<EmeraldAISystem>().RunSpeed = runSpeed[i];
         }
         
@@ -83,7 +84,9 @@ public class SpawnerBot : MonoBehaviour
     
     private void Level()
     {
+        text.GetComponent<TextMesh>().text=$"Level: {lvl+1}";
         lvl += 1;
+        Debug.Log("update " + lvl);
         countBot1Lvl += plusBotLvl;
         chanseHardBot += 5;
         

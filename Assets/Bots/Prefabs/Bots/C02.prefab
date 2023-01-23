@@ -1022,8 +1022,8 @@ MonoBehaviour:
   CurrentDamageAmount: 5
   DamageAmountRun: 5
   WanderRadius: 25
-  TabNumber: 1
-  TemperamentTabNumber: 1
+  TabNumber: 2
+  TemperamentTabNumber: 0
   DetectionTagsTabNumber: 0
   AnimationTabNumber: 3
   SoundTabNumber: 0
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   AttackAnimationNumber: 1
   RunAttackAnimationNumber: 1
   IdleAnimationNumber: 1
-  CombatTabNumber: 0
+  CombatTabNumber: 2
   FactionsAndTagTabNumber: 1
   EventTabNumber: 1
   MinimumWaitTime: 3
