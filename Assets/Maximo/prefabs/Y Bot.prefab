@@ -3172,7 +3172,7 @@ MonoBehaviour:
   RotateTowardsTarget: 0
   m_AttackAnimationClipMissing: 0
   ProjectileCollisionPointY: 1.5
-  m_ProjectileCollisionPoint: {x: -2.34, y: 1.5400009, z: 18.28}
+  m_ProjectileCollisionPoint: {x: -2.9509158, y: 1.5400002, z: -23.203209}
   ObstructionTimer: 0
   ObstructionSeconds: 4
   IdleVolume: 1
@@ -3325,6 +3325,19 @@ MonoBehaviour:
       - m_Target: {fileID: 8694204349828360683}
         m_TargetAssemblyTypeName: BNG.Damageable, Assembly-CSharp
         m_MethodName: DestroyThis
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3915996087113790262, guid: 112a11c210149e04fa86be5ee98b56fd,
+          type: 3}
+        m_TargetAssemblyTypeName: CounterKills, Assembly-CSharp
+        m_MethodName: Kill
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3596,7 +3609,7 @@ MonoBehaviour:
   TabNumber: 1
   TemperamentTabNumber: 5
   DetectionTagsTabNumber: 0
-  AnimationTabNumber: 2
+  AnimationTabNumber: 1
   SoundTabNumber: 0
   MovementTabNumber: 1
   WeaponTypeTabNumber: 0
@@ -3687,8 +3700,8 @@ MonoBehaviour:
   RangedRunAttack3AnimationSpeed: 1
   TurnLeftAnimationSpeed: 1
   TurnRightAnimationSpeed: 1
-  CombatTurnLeftAnimationSpeed: 1
-  CombatTurnRightAnimationSpeed: 1
+  CombatTurnLeftAnimationSpeed: 0.625
+  CombatTurnRightAnimationSpeed: 0.622
   RangedCombatTurnLeftAnimationSpeed: 1
   RangedCombatTurnRightAnimationSpeed: 1
   Death1AnimationSpeed: 1
@@ -4189,7 +4202,7 @@ MonoBehaviour:
   DeactivateCollidersOnDeath: []
   DestroyOnDeath: 1
   DropOnDeath: 0
-  DestroyDelay: 3
+  DestroyDelay: 10
   Respawn: 0
   RespawnTime: 10
   RemoveBulletHolesOnDeath: 1
