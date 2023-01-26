@@ -7,9 +7,11 @@ using UnityEngine.UI;
 public class FPSCounter : MonoBehaviour
 {
     [SerializeField] private float _updateDelay = 0.5f;
-    [SerializeField] private GameObject text;
-
+    [SerializeField] private GameObject textFps;
+    
+    [SerializeField] private GameObject textKill;
     private float _elapsedTime;
+    private int kill;
     
     void Update()
     {
@@ -18,9 +20,18 @@ public class FPSCounter : MonoBehaviour
         if (_elapsedTime >= _updateDelay)
         {
             int currentFPS = (int) (1 / Time.unscaledDeltaTime);
-            text.GetComponent<TextMesh>().text=$"FPS: {currentFPS}";
+            textFps.GetComponent<TextMesh>().text=$"FPS: {currentFPS}";
+            textKill.GetComponent<TextMesh>().text=$"Kill: {kill}";
             
             _elapsedTime = 0;
         }
     }
+
+    public void PlusKill()
+    {
+        Debug.Log("fps counter: kill");
+        kill += 1;
+        Debug.Log(kill);
+    }
+    
 }

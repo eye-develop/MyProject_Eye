@@ -1,24 +1,14 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CounterKills : MonoBehaviour
 {
-    [SerializeField] private GameObject killsText;
-    private int kills;
-
-    private void Awake()
+    [SerializeField] private GameObject text;
+    private float kill;
+    
+    public void TestKIll()
     {
-        kills = 0;
-            killsText.GetComponent<TextMesh>().text=$"Kills: {kills}";
-        
-        Debug.Log($"kill : {kills}");
-    }
-
-    public void Kill()
-    {
-        kills += 1;
-            killsText.GetComponent<TextMesh>().text=$"Kills: {kills}";
+        //FpsCounter.PlusKill();
     }
 }
