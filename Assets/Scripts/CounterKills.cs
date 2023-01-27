@@ -1,14 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using Assets.Scripts;
 
-public class CounterKills : MonoBehaviour
+namespace Assets.Scripts
 {
-    [SerializeField] private GameObject text;
-    private float kill;
-    
-    public void TestKIll()
+    public class CounterKills : MonoBehaviour
     {
-        //FpsCounter.PlusKill();
+        public static event Action PointKillsAction;
+    
+        [SerializeField] private GameObject text;
+        private float kill;
+    
+        public void TestKIll()
+        {
+            PointKillsAction?.Invoke();
+        }
     }
 }
