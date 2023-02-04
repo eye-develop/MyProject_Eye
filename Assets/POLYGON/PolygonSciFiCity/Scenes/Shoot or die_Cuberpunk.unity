@@ -88484,7 +88484,7 @@ MonoBehaviour:
   runSpeed: 0600000005000000
   chanseHardBot: 30
   lvl: 1
-  countBot1Lvl: 10
+  countBot1Lvl: 2
   plusBotLvl: 10
   plusSpeed: 1
   prefabBotBoss: {fileID: 8694204349828360692, guid: 03bda9dbb30abba40a17c4c4cd656196,
@@ -88721,6 +88721,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2718515592827697259, guid: 03bda9dbb30abba40a17c4c4cd656196,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718515592827697259, guid: 03bda9dbb30abba40a17c4c4cd656196,
+        type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8350751669945676622, guid: 03bda9dbb30abba40a17c4c4cd656196,
         type: 3}
       propertyPath: m_RootOrder
@@ -88835,6 +88845,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2718515592827697259, guid: 03bda9dbb30abba40a17c4c4cd656196,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2718515592827697259, guid: 03bda9dbb30abba40a17c4c4cd656196,
+        type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8350751669945676622, guid: 03bda9dbb30abba40a17c4c4cd656196,
         type: 3}
       propertyPath: m_RootOrder
