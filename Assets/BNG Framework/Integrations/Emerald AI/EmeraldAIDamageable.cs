@@ -22,7 +22,6 @@ namespace BNG {
                 GetComponent<EmeraldAI.EmeraldAISystem>().Damage((int)damageAmount, EmeraldAI.EmeraldAISystem.TargetType.Player, null, 400);
                 Debug.LogError("ffffffff++++++");
             }
-            Debug.LogError("ffff----");
         }
     }
 }

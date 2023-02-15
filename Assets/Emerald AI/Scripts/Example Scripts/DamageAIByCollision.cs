@@ -14,6 +14,7 @@ namespace EmeraldAI.Example
 
         private void OnCollisionEnter(Collision collision)
         {
+            Debug.LogError("DamageAIByCollision - OnCollisionEnter");
             //Damages an AI to the collided object
             if (collision.gameObject.GetComponent<EmeraldAISystem>() != null)
             {

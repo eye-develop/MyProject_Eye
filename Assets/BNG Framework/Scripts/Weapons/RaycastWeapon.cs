@@ -394,6 +394,12 @@ namespace BNG {
                 // Raycast to hit
                 RaycastHit hit;
                 if (Physics.Raycast(MuzzlePointTransform.position, MuzzlePointTransform.forward, out hit, MaxRange, ValidLayers, QueryTriggerInteraction.Ignore)) {
+                    
+                    
+                    //hit.collider.GetComponent<EmeraldAI.LocationBasedDamageArea>().CreateImpactEffect(hit.point);
+                    
+                    
+                    
                     OnRaycastHit(hit);
                 }
             }
