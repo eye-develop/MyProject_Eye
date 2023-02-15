@@ -15,11 +15,14 @@ namespace BNG {
             // https://github.com/Black-Horizon-Studios/Emerald-AI/wiki/Using-Location-Based-Damage
             if (GetComponent<EmeraldAI.LocationBasedDamageArea>() != null) {
                 GetComponent<EmeraldAI.LocationBasedDamageArea>().DamageArea((int)damageAmount, EmeraldAI.EmeraldAISystem.TargetType.Player, null, 400);
+                Debug.LogError("ffffffff");
             }
             // Core Damage
             else if (GetComponent<EmeraldAI.EmeraldAISystem>() != null) {
                 GetComponent<EmeraldAI.EmeraldAISystem>().Damage((int)damageAmount, EmeraldAI.EmeraldAISystem.TargetType.Player, null, 400);
+                Debug.LogError("ffffffff++++++");
             }
+            Debug.LogError("ffff----");
         }
     }
 }

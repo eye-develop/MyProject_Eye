@@ -455,7 +455,6 @@ GameObject:
   - component: {fileID: 1382099890450896700}
   - component: {fileID: 1382099890450896703}
   - component: {fileID: 1382099890450896702}
-  - component: {fileID: -4535018266979964840}
   m_Layer: 0
   m_Name: mixamorig:Head
   m_TagString: Untagged
@@ -553,38 +552,6 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
---- !u!114 &-4535018266979964840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382099890450896833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f897ae8fee40f48a708310634a78be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
-  SpawnOnDeath: {fileID: 0}
-  ActivateGameObjectsOnDeath: []
-  DeactivateGameObjectsOnDeath: []
-  DeactivateCollidersOnDeath: []
-  DestroyOnDeath: 1
-  DropOnDeath: 1
-  DestroyDelay: 0
-  Respawn: 0
-  RespawnTime: 10
-  RemoveBulletHolesOnDeath: 1
-  onDamaged:
-    m_PersistentCalls:
-      m_Calls: []
-  onDestroyed:
-    m_PersistentCalls:
-      m_Calls: []
-  onRespawn:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1691154203105153041
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,7 +3128,7 @@ GameObject:
   - component: {fileID: 1249618720791585913}
   - component: {fileID: 4676831953329846634}
   m_Layer: 0
-  m_Name: Y Bot
+  m_Name: Y Bot 1
   m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3437,9 +3404,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: -9179960973175096302}
-        m_TargetAssemblyTypeName: Assets.Scripts.CounterKills, Assembly-CSharp
-        m_MethodName: OnDestroy
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BNG.Damageable, Assembly-CSharp
+        m_MethodName: DestroyThis
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3710,7 +3677,7 @@ MonoBehaviour:
   DamageAmountRun: 5
   WanderRadius: 25
   TabNumber: 1
-  TemperamentTabNumber: 5
+  TemperamentTabNumber: 2
   DetectionTagsTabNumber: 0
   AnimationTabNumber: 1
   SoundTabNumber: 0
@@ -3739,7 +3706,7 @@ MonoBehaviour:
   CritMultiplier: 2
   WalkBackwardsSpeed: 1
   WalkSpeed: 2
-  RunSpeed: 7
+  RunSpeed: 6
   ExpandedFieldOfViewAngle: 300
   fieldOfViewAngle: 180
   fieldOfViewAngleRef: 0

@@ -22,6 +22,7 @@ namespace EmeraldAI.Example
             //Damages an AI's location based damage component
             else if (collision.gameObject.GetComponent<LocationBasedDamageArea>() != null)
             {
+                Debug.LogError("DamageAIByCollision - LocationBasedDamageArea");
                 LocationBasedDamageArea LBDArea = collision.gameObject.GetComponent<LocationBasedDamageArea>();
                 LBDArea.DamageArea(DamageAmount, EmeraldAISystem.TargetType.Player, transform, 300);
             }
