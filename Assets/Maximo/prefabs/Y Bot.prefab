@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 1382099890450896700}
   - component: {fileID: 1382099890450896703}
   - component: {fileID: 1382099890450896702}
+  - component: {fileID: -4535018266979964840}
   m_Layer: 0
   m_Name: mixamorig:Head
   m_TagString: Untagged
@@ -552,6 +553,38 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &-4535018266979964840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382099890450896833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f897ae8fee40f48a708310634a78be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  SpawnOnDeath: {fileID: 0}
+  ActivateGameObjectsOnDeath: []
+  DeactivateGameObjectsOnDeath: []
+  DeactivateCollidersOnDeath: []
+  DestroyOnDeath: 1
+  DropOnDeath: 1
+  DestroyDelay: 0
+  Respawn: 0
+  RespawnTime: 10
+  RemoveBulletHolesOnDeath: 1
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+  onRespawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1691154203105153041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2325,6 +2358,7 @@ GameObject:
   - component: {fileID: 6788301379798128288}
   - component: {fileID: 6788301379798128291}
   - component: {fileID: 6788301379798128290}
+  - component: {fileID: 8841133752553774699}
   m_Layer: 0
   m_Name: mixamorig:LeftLeg
   m_TagString: Untagged
@@ -2423,6 +2457,38 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8841133752553774699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6788301379798128293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f897ae8fee40f48a708310634a78be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  SpawnOnDeath: {fileID: 0}
+  ActivateGameObjectsOnDeath: []
+  DeactivateGameObjectsOnDeath: []
+  DeactivateCollidersOnDeath: []
+  DestroyOnDeath: 1
+  DropOnDeath: 1
+  DestroyDelay: 0
+  Respawn: 0
+  RespawnTime: 10
+  RemoveBulletHolesOnDeath: 1
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+  onRespawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6889305270984834017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2467,6 +2533,7 @@ GameObject:
   - component: {fileID: 6912017057054842503}
   - component: {fileID: 6912017057054842505}
   - component: {fileID: 6912017057054842502}
+  - component: {fileID: 3957629753055279224}
   m_Layer: 0
   m_Name: mixamorig:LeftUpLeg
   m_TagString: Untagged
@@ -2565,6 +2632,38 @@ CharacterJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &3957629753055279224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6912017057054842504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f897ae8fee40f48a708310634a78be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  SpawnOnDeath: {fileID: 0}
+  ActivateGameObjectsOnDeath: []
+  DeactivateGameObjectsOnDeath: []
+  DeactivateCollidersOnDeath: []
+  DestroyOnDeath: 1
+  DropOnDeath: 1
+  DestroyDelay: 0
+  Respawn: 0
+  RespawnTime: 10
+  RemoveBulletHolesOnDeath: 1
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+  onRespawn:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7048136671651510302
 GameObject:
   m_ObjectHideFlags: 0
@@ -3056,12 +3155,11 @@ GameObject:
   - component: {fileID: 8694204349828360691}
   - component: {fileID: 8694204349828360690}
   - component: {fileID: 8694204349828360693}
-  - component: {fileID: 8694204349828360683}
   - component: {fileID: -9179960973175096302}
   - component: {fileID: 2898720978841328412}
   - component: {fileID: 2718515592827697259}
-  - component: {fileID: 4432462000992223254}
-  - component: {fileID: 1536037792753523432}
+  - component: {fileID: 1249618720791585913}
+  - component: {fileID: 4676831953329846634}
   m_Layer: 0
   m_Name: Y Bot
   m_TagString: AI
@@ -3339,9 +3437,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8694204349828360683}
-        m_TargetAssemblyTypeName: BNG.Damageable, Assembly-CSharp
-        m_MethodName: DestroyThis
+      - m_Target: {fileID: -9179960973175096302}
+        m_TargetAssemblyTypeName: Assets.Scripts.CounterKills, Assembly-CSharp
+        m_MethodName: OnDestroy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3421,7 +3519,8 @@ MonoBehaviour:
   StationaryIdleSecondsMin: 3
   StationaryIdleSecondsMax: 6
   BloodEffectTimeoutSeconds: 3
-  BloodEffectsList: []
+  BloodEffectsList:
+  - {fileID: 0}
   CurrentProjectile: {fileID: 0}
   ProjectileDirection: {x: 0, y: 0, z: 0}
   potentialTargets: []
@@ -3611,7 +3710,7 @@ MonoBehaviour:
   DamageAmountRun: 5
   WanderRadius: 25
   TabNumber: 1
-  TemperamentTabNumber: 2
+  TemperamentTabNumber: 5
   DetectionTagsTabNumber: 0
   AnimationTabNumber: 1
   SoundTabNumber: 0
@@ -3622,7 +3721,7 @@ MonoBehaviour:
   AttackAnimationNumber: 1
   RunAttackAnimationNumber: 1
   IdleAnimationNumber: 1
-  CombatTabNumber: 2
+  CombatTabNumber: 0
   FactionsAndTagTabNumber: 0
   EventTabNumber: 1
   MinimumWaitTime: 3
@@ -3640,7 +3739,7 @@ MonoBehaviour:
   CritMultiplier: 2
   WalkBackwardsSpeed: 1
   WalkSpeed: 2
-  RunSpeed: 6
+  RunSpeed: 7
   ExpandedFieldOfViewAngle: 300
   fieldOfViewAngle: 180
   fieldOfViewAngleRef: 0
@@ -3825,7 +3924,7 @@ MonoBehaviour:
   DisplayAITitleRef: 0
   DisplayAILevelRef: 0
   HasMultipleLODsRef: 0
-  UseHitEffect: 1
+  UseHitEffect: 0
   UseRunAttacks: 0
   UseHeadLookRef: 1
   UseBlockingRef: 0
@@ -3985,8 +4084,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.64900595, y: 1.8758467, z: 0.12930201}
-  m_Center: {x: 0, y: 0.93792, z: 0}
+  m_Size: {x: 0.64900595, y: 0.046003953, z: 0.12930201}
+  m_Center: {x: 0, y: 0.022998638, z: 0}
 --- !u!195 &8694204349828360687
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4187,38 +4286,6 @@ MonoBehaviour:
   DeathDelay: 0
   BoneObjects: 
   BoneTransformList: []
---- !u!114 &8694204349828360683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8694204349828360692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f897ae8fee40f48a708310634a78be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 200
-  SpawnOnDeath: {fileID: 0}
-  ActivateGameObjectsOnDeath: []
-  DeactivateGameObjectsOnDeath: []
-  DeactivateCollidersOnDeath: []
-  DestroyOnDeath: 1
-  DropOnDeath: 0
-  DestroyDelay: 10
-  Respawn: 0
-  RespawnTime: 10
-  RemoveBulletHolesOnDeath: 1
-  onDamaged:
-    m_PersistentCalls:
-      m_Calls: []
-  onDestroyed:
-    m_PersistentCalls:
-      m_Calls: []
-  onRespawn:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &-9179960973175096302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4288,7 +4355,7 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &4432462000992223254
+--- !u!114 &1249618720791585913
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4324,7 +4391,7 @@ MonoBehaviour:
     DamageMultiplier: 1
   - ColliderObject: {fileID: 1125443719353576281}
     DamageMultiplier: 1
---- !u!114 &1536037792753523432
+--- !u!114 &4676831953329846634
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4379,6 +4446,7 @@ GameObject:
   - component: {fileID: 4590160514039075802}
   - component: {fileID: 8893603793024649901}
   - component: {fileID: 8893603793024649900}
+  - component: {fileID: 6301183104818783805}
   m_Layer: 0
   m_Name: mixamorig:Hips
   m_TagString: Untagged
@@ -4432,3 +4500,35 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6301183104818783805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8893603793024649903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96f897ae8fee40f48a708310634a78be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 100
+  SpawnOnDeath: {fileID: 0}
+  ActivateGameObjectsOnDeath: []
+  DeactivateGameObjectsOnDeath: []
+  DeactivateCollidersOnDeath: []
+  DestroyOnDeath: 1
+  DropOnDeath: 1
+  DestroyDelay: 0
+  Respawn: 0
+  RespawnTime: 10
+  RemoveBulletHolesOnDeath: 1
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+  onRespawn:
+    m_PersistentCalls:
+      m_Calls: []

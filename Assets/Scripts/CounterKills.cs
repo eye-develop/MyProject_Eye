@@ -18,5 +18,18 @@ namespace Assets.Scripts
         {
             PointKillsAction?.Invoke();
         }
+
+        public void OnDestroy()
+        {
+            Debug.LogWarning("destroy");
+            StartCoroutine(DestroyTime());
+        }
+
+        IEnumerator DestroyTime()
+        {
+            yield return new WaitForSeconds(2f);
+            
+            Destroy(gameObject);
+        }
     }
 }
