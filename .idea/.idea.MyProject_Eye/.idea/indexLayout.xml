@@ -5,7 +5,7 @@
       <Path>$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ext.nunit@1.0.0</Path>
     </attachedFolders>
     <explicitIncludes>
-      <Path>$USER_HOME$/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ext.nunit@1.0.0</Path>
+      <Path>Assets</Path>
       <Path>Library/PackageCache/com.unity.burst@1.6.6</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.17.0</Path>
       <Path>Library/PackageCache/com.unity.collections@1.4.0</Path>

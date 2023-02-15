@@ -3060,6 +3060,8 @@ GameObject:
   - component: {fileID: -9179960973175096302}
   - component: {fileID: 2898720978841328412}
   - component: {fileID: 2718515592827697259}
+  - component: {fileID: 4432462000992223254}
+  - component: {fileID: 1536037792753523432}
   m_Layer: 0
   m_Name: Y Bot
   m_TagString: AI
@@ -3609,7 +3611,7 @@ MonoBehaviour:
   DamageAmountRun: 5
   WanderRadius: 25
   TabNumber: 1
-  TemperamentTabNumber: 5
+  TemperamentTabNumber: 2
   DetectionTagsTabNumber: 0
   AnimationTabNumber: 1
   SoundTabNumber: 0
@@ -3823,7 +3825,7 @@ MonoBehaviour:
   DisplayAITitleRef: 0
   DisplayAILevelRef: 0
   HasMultipleLODsRef: 0
-  UseHitEffect: 0
+  UseHitEffect: 1
   UseRunAttacks: 0
   UseHeadLookRef: 1
   UseBlockingRef: 0
@@ -3984,7 +3986,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.64900595, y: 1.8758467, z: 0.12930201}
-  m_Center: {x: 0, y: 0.9379234, z: 0}
+  m_Center: {x: 0, y: 0.93792, z: 0}
 --- !u!195 &8694204349828360687
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4281,10 +4283,61 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 2898720978841328412}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &4432462000992223254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694204349828360692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea90b83659abaa43ac9e5fa97b9597b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColliderListFoldout: 1
+  ColliderList:
+  - ColliderObject: {fileID: 8893603793024649901}
+    DamageMultiplier: 1
+  - ColliderObject: {fileID: 6912017057054842503}
+    DamageMultiplier: 1
+  - ColliderObject: {fileID: 6788301379798128288}
+    DamageMultiplier: 1
+  - ColliderObject: {fileID: 2396948384254451757}
+    DamageMultiplier: 1
+  - ColliderObject: {fileID: 4014483095113808360}
+    DamageMultiplier: 1
+  - ColliderObject: {fileID: 7048136671651510301}
+    DamageMultiplier: 1
+  - ColliderObject: {fileID: 1024029376667787557}
+    DamageMultiplier: 1
+  - ColliderObject: {fileID: 4801963957226537453}
+    DamageMultiplier: 1
+  - ColliderObject: {fileID: 1382099890450896700}
+    DamageMultiplier: 5
+  - ColliderObject: {fileID: 8536097419890824926}
+    DamageMultiplier: 1
+  - ColliderObject: {fileID: 1125443719353576281}
+    DamageMultiplier: 1
+--- !u!114 &1536037792753523432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694204349828360692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ded479506d679a4f836c4476e6dfefd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageMultiplier: 1
+  EmeraldComponent: {fileID: 0}
 --- !u!1 &8793001069251263952
 GameObject:
   m_ObjectHideFlags: 0
