@@ -44,28 +44,30 @@ public class SpawnerBot : MonoBehaviour
 
     private void Awake()
     {
-        prefabBotBoss.GetComponent<EmeraldAISystem>().DetectionRadius = detectionRadiusBoss;
+        /*prefabBotBoss.GetComponent<EmeraldAISystem>().DetectionRadius = detectionRadiusBoss;
         prefabBotBoss.GetComponent<EmeraldAISystem>().RunSpeed = runSpeedBoss;
         
         for (int i = 0; i < prefabsBot.Count - 1; i++)
         {
             //prefabsBot[i].GetComponent<EmeraldAISystem>().DetectionRadius = detectionRadius[i];
             prefabsBot[i].GetComponent<EmeraldAISystem>().RunSpeed = runSpeed[i];
-        }
+        }*/
         
     }
 
     private void Start()
-    {
+    {/*
         StartCoroutine(Spawn());
-        StartCoroutine(AllBot());
+        StartCoroutine(AllBot());*/
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            var testObj = PhotonNetwork.Instantiate("TestNetObj", new Vector3(-1, 1, -10), quaternion.identity);
+            var testObj = PhotonNetwork.InstantiateRoomObject/*("TestNetObj", new Vector3(-1, 1, -10), quaternion.identity);*/("TestBotNet",spawners[0].transform.position,Quaternion.identity);
+           
+            testObj.transform.parent = parent.transform;
             Debug.Log(testObj.name );
         }
     }
@@ -85,7 +87,7 @@ public class SpawnerBot : MonoBehaviour
                     bot.transform.parent = gameObject.transform;
                     break;
                 case { } n when (n <= chanseHardBot):
-                    Instantiate(prefabsBot[1],spawners[randomSpawn].transform.position,Quaternion.identity,parent.transform);
+                    //Instantiate(prefabsBot[1],spawners[randomSpawn].transform.position,Quaternion.identity,parent.transform);
                     break;
                 default:
                     break;
@@ -98,7 +100,7 @@ public class SpawnerBot : MonoBehaviour
     private void Level()
     {
         text.GetComponent<TextMesh>().text=$"Level: {lvl+1}";
-        lvl += 1;
+        //lvl += 1;
         Debug.Log("update " + lvl);
         countBot1Lvl += plusBotLvl;
         chanseHardBot += 5;
