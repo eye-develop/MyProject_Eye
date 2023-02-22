@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using EmeraldAI;
+using Photon.Pun;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -58,7 +60,16 @@ public class SpawnerBot : MonoBehaviour
         StartCoroutine(Spawn());
         StartCoroutine(AllBot());
     }
-    
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            var testObj = PhotonNetwork.Instantiate("TestNetObj", new Vector3(-1, 1, -10), quaternion.identity);
+            Debug.Log(testObj.name );
+        }
+    }
+
     private IEnumerator Spawn()
     {
         for (int i = 0; i < countBot1Lvl; i++)
@@ -69,7 +80,9 @@ public class SpawnerBot : MonoBehaviour
             switch (randomBot)
             {
                 case { } n when (n > chanseHardBot && n <= 100):
-                    Instantiate(prefabsBot[0],spawners[randomSpawn].transform.position,Quaternion.identity,parent.transform);
+                    //Instantiate(prefabsBot[0],spawners[randomSpawn].transform.position,Quaternion.identity,parent.transform);
+                    var bot =PhotonNetwork.Instantiate("TestBotNet",transform.position,Quaternion.identity);
+                    bot.transform.parent = gameObject.transform;
                     break;
                 case { } n when (n <= chanseHardBot):
                     Instantiate(prefabsBot[1],spawners[randomSpawn].transform.position,Quaternion.identity,parent.transform);

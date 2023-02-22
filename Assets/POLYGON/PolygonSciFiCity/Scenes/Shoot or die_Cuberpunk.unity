@@ -88222,8 +88222,8 @@ MonoBehaviour:
   runSpeed: 0200000005000000
   chanseHardBot: 30
   lvl: 1
-  countBot1Lvl: 2
-  plusBotLvl: 10
+  countBot1Lvl: 1
+  plusBotLvl: 1
   plusSpeed: 1
   prefabBotBoss: {fileID: 8694204349828360692, guid: 03bda9dbb30abba40a17c4c4cd656196,
     type: 3}
