@@ -10,7 +10,7 @@ namespace EmeraldAI.CharacterController
         public float smoothTime = 0.3F;
         private Vector3 velocity = Vector3.zero;
 
-        void Update()
+        void LateUpdate()
         {
             // Smoothly move the camera towards that target position
             transform.position = Vector3.SmoothDamp(transform.position, target.position + CameraOffset, ref velocity, smoothTime);

@@ -28,8 +28,9 @@ namespace Assets.Scripts
         IEnumerator DestroyTime()
         {
             yield return new WaitForSeconds(2f);
-            
-            Destroy(gameObject);
+            Debug.Log("fffff");
+            SpawnerBot.Dest(gameObject);
+            //Destroy(gameObject);
         }
     }
 }

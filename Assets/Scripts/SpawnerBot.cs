@@ -42,6 +42,7 @@ public class SpawnerBot : MonoBehaviour
     [Tooltip("Скорость бега")]
     [SerializeField] private int runSpeedBoss = 5;
 
+    GameObject testObj;
     private void Awake()
     {
         /*prefabBotBoss.GetComponent<EmeraldAISystem>().DetectionRadius = detectionRadiusBoss;
@@ -65,9 +66,10 @@ public class SpawnerBot : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            var testObj = PhotonNetwork.InstantiateRoomObject/*("TestNetObj", new Vector3(-1, 1, -10), quaternion.identity);*/("TestBotNet",spawners[0].transform.position,Quaternion.identity);
-           
-            testObj.transform.parent = parent.transform;
+                testObj = PhotonNetwork.InstantiateRoomObject/*("TestNetObj", new Vector3(-1, 1, -10), quaternion.identity);*/("TestBotNet",spawners[0].transform.position,Quaternion.identity,0,null);
+                testObj.GetComponent<PhotonView>().TransferOwnership(0);
+                
+                testObj.transform.parent = parent.transform;
             Debug.Log(testObj.name );
         }
     }
@@ -137,5 +139,10 @@ public class SpawnerBot : MonoBehaviour
                 Level();
             }
         }
+    }
+
+    public static void Dest(GameObject gg)
+    {
+        PhotonNetwork.Destroy(gg);
     }
 }
