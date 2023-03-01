@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-public class SpawnerBot : MonoBehaviour
+public class SpawnerBot : MonoBehaviourPunCallbacks
 {
     [SerializeField] private GameObject text;
     [Tooltip("Точки появления бота")]
@@ -64,12 +64,13 @@ public class SpawnerBot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-                testObj = PhotonNetwork.InstantiateRoomObject/*("TestNetObj", new Vector3(-1, 1, -10), quaternion.identity);*/("TestBotNet",spawners[0].transform.position,Quaternion.identity,0,null);
-                testObj.GetComponent<PhotonView>().TransferOwnership(0);
+            
+            testObj = PhotonNetwork.InstantiateSceneObject("TestBotNet",spawners[0].transform.position,Quaternion.identity,0,null);
+            //testObj.GetComponent<PhotonView>().TransferOwnership(0);
                 
-                testObj.transform.parent = parent.transform;
+            testObj.transform.parent = parent.transform;
             Debug.Log(testObj.name );
         }
     }

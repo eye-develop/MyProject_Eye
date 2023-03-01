@@ -2533,7 +2533,7 @@ namespace Photon.Pun
 #endif
 
 #if DEVELOPMENT_BUILD || UNITY_EDITOR
-            if (!string.IsNullOrEmpty(PhotonServerSettings.DevRegion) && ConnectMethod == ConnectMethod.ConnectToBest)
+            /*if (!string.IsNullOrEmpty(PhotonServerSettings.DevRegion) && ConnectMethod == ConnectMethod.ConnectToBest)
             {
                 Debug.LogWarning("PUN is in development mode (development build). As the 'dev region' is not empty (" + PhotonServerSettings.DevRegion + ") it overrides the found best region. See PhotonServerSettings.");
 
@@ -2547,7 +2547,7 @@ namespace Photon.Pun
 
                 PhotonNetwork.NetworkingClient.ConnectToRegionMaster(_finalDevRegion);
                 return;
-            }
+            }*/
 #endif
 
             if (NetworkClientState == ClientState.ConnectedToNameServer)
