@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/POLYGON/PolygonSciFiCity/Scenes/Shoot or die_Cuberpunk.unity
     guid: 8afe4d4865595b145860f7261a8c77ea
+  - enabled: 1
+    path: Assets/Scripts/Lobby/Rooms.unity
+    guid: 1b451cbbbf79f81489cf56ff1675c7b4
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4d9a5df978638bd4da0afbeb62de7feb,
       type: 2}
